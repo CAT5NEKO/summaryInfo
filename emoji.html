@@ -1,0 +1,730 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>絵文字、掲載許諾コンテンツの著作権についての適用</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="85357b90-798c-4448-aec1-acdcb97e1ec0" class="page sans"><header><h1 class="page-title">絵文字、掲載許諾コンテンツの著作権についての適用</h1><p class="page-description"></p></header><div class="page-body"><p id="03553fc0-803f-4647-9f8b-1508d7b4ceff" class="">
+</p><p id="97861f6f-c489-44e6-a4d0-7bc34d52ddf3" class="">お世話になっております。</p><p id="18416b14-9c62-4125-9e87-70b63bb1607c" class="">
+</p><p id="8dd29bb8-9dfa-45ec-a0f8-15995a45e21d" class="">サマリーが公式で皆様に提供する映像コンテンツ、絵文字、その他メディアファイルは、著作権をクリアしたものに限定しています。（利用者様のコンテンツに関しては含みません）</p><p id="71667908-84e2-40ea-9768-9037d41a5517" class="">サマリーで提供するコンテンツは</p><p id="76413545-bf54-4d7d-8240-a5d0c6cd3903" class="">
+</p><p id="01de2d36-3cf8-4438-8efb-d585eea51cd4" class="">①サマリーで公式として掲載しているコンテンツ</p><p id="6b8f5c8b-07e3-4ea3-9305-63d24bcecc60" class="">②利用者の方から提供の許諾を頂き、掲載するコンテンツ</p><p id="abf2ac1a-4644-458f-9096-be7a4240dc8a" class="">
+</p><p id="65fbc7bd-ff31-4b6f-9da0-46fbcf061f95" class="">の２種類がございます。</p><p id="16de0a9a-05b8-4718-80af-17d1e17f187e" class="">
+</p><p id="e63877ea-15d0-4cf7-8f23-294ea57f582c" class="">①に関してはパブリックドメイン（著作権放棄コンテンツ）、規約などで許諾を得著作権をクリアしたものを提供しています。</p><p id="319a6a8b-f78c-40a3-b521-4ae4aded136e" class="">
+</p><p id="d534b2bd-39bc-468b-8d49-988c0f0faa15" class="">②に関しては、提供者様の意向によって適宜ライセンス管理を調整させていただいております。</p><p id="cf7d7ec9-6be2-44ab-98a8-bdd8173ebb42" class="">
+</p><p id="0dbce3b7-e648-4812-8422-9aeccac5b4ac" class="">今回は後者について具体的な場合分けを行い説明させて頂きます。</p><p id="5b4b79c9-c8c3-42bf-9745-62506603c869" class="">
+</p><h1 id="246328f8-fd8d-4277-898d-1f2d545b2238" class="">提供者様によるコンテンツ提供時にライセンスに関する詳細な明示が無い場合</h1><p id="be9627ee-0183-4757-8281-a949210c23db" class="">
+</p><p id="48580f3f-4cd7-46d9-b96f-cc5abcbbb9b3" class="">利用者様がサマリーに「これ絵文字として使っていいよ」とご提供いただいた際に、</p><p id="fd9fcc03-e580-4865-bfbc-757f4ed3dbc5" class="">ライセンスに関しては特に定めてなかった場合については、クリエイティブコモンズに規定される</p><p id="d79eb925-e348-4fe1-934a-0bcca58a6623" class="">
+</p><p id="05f430c0-4300-4f7b-b418-e13ae39cd6ad" class=""><strong>表示 - 非営利 - 改変禁止 4.0 国際(CC BY-NC-ND 4.0)（以下CC4.0）の規定を準用させて頂きます。</strong></p><p id="2321a42f-b765-41a7-b10d-01609ed213ec" class="">
+</p><figure id="e8614bab-e276-457b-9bfa-812213f98233" class="image"><a href="%E7%B5%B5%E6%96%87%E5%AD%97%E3%80%81%E6%8E%B2%E8%BC%89%E8%A8%B1%E8%AB%BE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E8%91%97%E4%BD%9C%E6%A8%A9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E9%81%A9%E7%94%A8%2085357b90798c4448aec1acdcb97e1ec0/Untitled_2.png"><img style="width:515px" src="%E7%B5%B5%E6%96%87%E5%AD%97%E3%80%81%E6%8E%B2%E8%BC%89%E8%A8%B1%E8%AB%BE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E8%91%97%E4%BD%9C%E6%A8%A9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E9%81%A9%E7%94%A8%2085357b90798c4448aec1acdcb97e1ec0/Untitled_2.png"/></a></figure><p id="22ba786b-987e-4706-a701-ef3addcea3a6" class="">
+</p><p id="7404897d-f1ff-4f4a-bf2a-77968c058e43" class="">サマリーは以下の条件に従う限り、自由に共有 （資料を複製、再配布等）を行う事ができ、また サマリーがライセンスの条件に従っている限り、許諾者がこれらの自由を取り消すことはできません。</p><p id="5d84a992-d156-44dc-bc37-584320b02d03" class="">
+</p><ul id="9cd67d23-5ec8-4dce-b730-52af1d70223b" class="bulleted-list"><li style="list-style-type:disc">著作者の表示、著作者へのリンクの掲示¹</li></ul><ul id="ec2ab153-703c-4cf7-a721-1c0e98d16d7d" class="bulleted-list"><li style="list-style-type:disc">非営利を目的として使用</li></ul><ul id="1481b587-894d-459e-86a0-b5867ab11d2d" class="bulleted-list"><li style="list-style-type:disc">コンテンツの内容にライセンスの明記に逸脱、あるいはコンテンツの内容を変容するような改変を行わない事</li></ul><p id="6a5c6346-1d79-46f5-b328-9654d0284490" class="">
+</p><p id="363bd5f6-c298-4e6f-87a1-2d7c3f1eed19" class="">注釈¹　著作者へのリンクは当該ページに掲載させていただく形を取ります。</p><p id="0c0ae4cf-927b-4cbb-9226-3ef8628bb366" class="">
+</p><p id="e92b3f49-b365-4be0-8973-bfbb3fab9f9a" class="">提供者様がコンテンツを提供される際に具体的なライセンスについての規定を定めていなかった場合、サマリー側に権利を任せる場合はこちらを使用させて頂きます。</p><p id="849177a5-4447-44c9-b30d-c5cd36b90972" class="">
+</p><p id="85a29b33-9e0d-4b85-85f5-5e5f3ac2860f" class="">CC4.0が適用された場合にはサマリー上では以下のように取り扱います。</p><p id="c502c202-190d-4f38-b786-6b3085f8ed03" class="">
+</p><p id="59dc100d-1721-4cf1-b6f5-b0828acee64e" class="">①絵文字一覧でのライセンス表示</p><p id="6a5318c3-d533-496d-a467-b5b23cf5ad3d" class="">②当該ページでの著作者のアカウントあるいは公式ホームページなどへのリンク掲載</p><p id="0e1c7913-9152-4691-a00b-f6bf36624fc1" class="">
+</p><h1 id="2d01f19a-a9b1-44f8-a90f-33da7d3841dd" class="">提供者様によるコンテンツ提供時に具体的なライセンスの定めがある場合</h1><p id="e3a2a8b2-659f-4a8b-baf0-2a2225799d45" class="">
+</p><p id="8d6ed209-6bd5-4ecc-ad51-154275b03e89" class="">利用者様がサマリーに「これ絵文字として使っていいよ」とご提供いただいた際に、</p><p id="f1c5e939-d776-44a9-8da5-32ba932d76bc" class="">ライセンスに関して具体的な定めがある場合には、定めなき場合の適用に加え、個別具体的に対応させて頂きます。</p><p id="7443c582-a64d-4538-adf1-0b43b078bf0b" class="">
+</p><p id="92ca597a-3f55-494e-91a8-8bfcd0e90516" class="">具体的な事例を数点あげておきます。</p><p id="15d196d1-b35c-478c-a60e-b252315b56ab" class="">
+</p><h2 id="4c772474-5e93-45f3-a132-6cae8c5db300" class="">サマリー以外での公開を制限</h2><p id="9f89f759-35cf-4e9d-b3b0-ccf136ee8a0a" class="">
+</p><p id="73a9616b-9c07-4432-afa0-660d40125a77" class="">Misskeyのサーバー管理者はその職権として他のサーバーから絵文字を輸入できる仕組みがシステム上備わっています。そのためサマリーで公開した絵文字に関しては、原則としては他のサーバーでも利用可能な状態になります。</p><p id="97c94565-4b75-42d6-a550-feb1a4628b79" class="">
+</p><p id="f8f452e2-2070-4d7c-acf9-a41e11ddf044" class="">しかし、絵文字を登録する際に関しては他のサーバーが絵文字を輸入することを防ぐ設定が可能ですので、そちらを利用して外部への流出を防止することは可能です。</p><p id="39c0f777-3c61-4389-b425-3aa355b5d47d" class="">外部公開を制限する旨の申し出があった場合には、こちらの設定を追加させていただく形で対応させて頂きます。</p><p id="28e25de2-1f94-423b-80b5-d9b86f27a836" class="">
+</p><p id="dfdc7c75-fb0b-47fc-a621-a40427f07da8" class="">尚、他のサーバー管理者が特殊な方法をもってこれらの制限を解除し、結果的にコンテンツが流出するような事があったとしてもサマリーは一切の責任を負えません。その点ご了承いただけると幸いです。</p><p id="a521d0e0-b15e-49fe-a712-5475baaf23b1" class="">
+</p><h2 id="3753a2f6-fd9c-4ed2-8831-7299d0e47423" class="">パブリックドメイン・著作権放棄</h2><p id="9b75be83-9411-407d-b64a-dfc3b47db13c" class="">
+</p><p id="1a428fa0-ffa8-42a9-88e2-bbe0f6fecad8" class="">利用者様がコンテンツを提供する際に当該コンテンツをパブリックドメインとして適用する旨がある場合には、絵文字の場合はライセンス欄にその旨を記載します。</p><p id="5674893c-d977-4bd7-968e-22ed9abb64df" class="">
+</p><p id="1fb9b125-161d-4766-ac71-e40bc4ae9d89" class="">クリエイティブコモンズに関する具体的な内容に関しては公式ドキュメントをご参照頂けると幸いです。</p><p id="80609c3b-71f2-4714-80ff-fd981af70daf" class="">
+</p><figure id="2cbb71fa-e168-48cd-a5f6-f879203c55ce"><a href="https://creativecommons.org/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">When we share, everyone wins - Creative Commons</div><div class="bookmark-description">CC is an international nonprofit organization that empowers people to grow and sustain the thriving commons of shared knowledge and culture we need to address the world’s most pressing challenges and create a brighter future for all. Together with our global community and multiple partners, we build capacity and infrastructure, we develop practical solutions, and … Read More &quot;When we share, everyone wins&quot;</div></div><div class="bookmark-href"><img src="https://creativecommons.org/wp-content/uploads/2016/05/cc-site-icon-300x300.png" class="icon bookmark-icon"/>https://creativecommons.org/</div></div></a></figure><p id="ea5bee42-bb3b-4789-a37e-186d0e6464e3" class="">
+</p><h1 id="3094250c-3caa-4f11-828a-4f1d8245247e" class="">絵文字、イラストコンテンツのご提供方法、提供中止、異議申し立てに関して</h1><p id="411a6430-4ab4-4277-88d9-edebe3ce60da" class="">
+</p><p id="9b6c7f6f-df34-47b5-9167-e2c780566bc4" class="">サマリーをご利用いただいている上にコンテンツ提供まで申し出て頂けると本当に感謝でいっぱいです。ありがとうございます！</p><p id="49cccb49-743b-4392-9063-7364cab16cbc" class="">
+</p><p id="069cadd0-5a1a-4808-8a54-e35a3d1c5840" class="">サマリーに対してコンテンツを提供、中止する方法は以下の通りです。</p><p id="80ce7a32-591f-44cc-9a53-a74d2afcb96c" class="">利用者様が望ましいと思われる方法でご送付いただけると幸いです。</p><p id="7f68576f-3bdd-42df-be44-cbb15f283397" class="">
+</p><h2 id="783e77b7-a884-4ad0-b8d6-79f67426cb44" class="">メールで送信（おすすめ）</h2><p id="58603b60-4ee6-461a-b7a4-32babe5e2a90" class="">
+</p><p id="82bdcb6e-6d40-41ea-9ce5-bd2479167193" class="">よほどの事情がない限り、毎日メールチャックはしておりますので、メールにてご送付頂けると確実に僕の目にとまります。</p><p id="b4d2276f-62f0-4dc9-b83a-5a25411c0686" class="">
+</p><h3 id="b6eb5143-2976-411e-8c59-56f7d3a070c9" class=""><a href="mailto:vrfzim64@duck.com">vrfzim64@duck.com</a></h3><p id="8dcd4e72-35af-48c9-bc85-f39d6f371f0d" class="">こちらのアドレスにご送付ください。</p><h2 id="e3b0a07a-414e-4145-b955-d6c3c9deeed2" class="">僕と繋がっている外部のサービスで送信</h2><p id="c98ce047-3855-4eee-b95a-71ce41efc384" class="">
+</p><p id="0f9abcc8-8bb5-4a9c-a1ba-6b2775685ac5" class="">DiscordやMatrix等、他のチャットツールなどの僕のアカウントをご存じの場合は、そちらで送って頂いても構いません。但し、諸般の事情により確認が遅れる場合もたびたびございますので、返事を行うのに多少のお時間は頂く可能性がございます。その点ご了承いただけると幸いです。</p><p id="fc2933ba-2dfb-4db8-a1d0-2812bf4e849a" class="">
+</p><h2 id="23961d00-ff94-4747-a90e-5b90bf2e4cf0" class="">サマリー管理局にDMで送信（非推奨）</h2><p id="7b750af2-4917-4930-abb5-b99e64d19c2e" class="">
+</p><p id="4370e62b-d1fb-41b8-8952-35d1c5c43bca" class="">サマリー管理局は主に広報、重要な連絡事項の伝達、モデレーション活動、お知らせの掲示、異議、質疑に関する対応を目的として運用させて頂いております。</p><p id="4eda9da7-2503-4780-a8ac-a6a3040e073f" class="">そのため、当該アカウントの確認は必要に応じて行う形であるため、確認するタイミングが不確定です。但し、DMとして送付された内容に関しては到着したものにつき回答させて頂きます。</p><p id="7cf035a9-8df9-4ef2-9e2c-b98c86a6c73a" class="">
+</p><h2 id="23f08991-3835-41e2-b69e-55dcf5b6cccf" class="">申請フォーマット</h2><p id="8160f1a1-6d97-47a0-bbbe-1808152cb1d7" class="">
+</p><p id="43274185-d3d0-409a-80cd-593c198a6c44" class="">申請時に以下の事項を記載して頂けると幸いです。</p><p id="ba4f3c2e-10d4-4c21-8296-f6e794157561" class="">尚、記載内容に関してはシステム、あるいは文字コードの制約がない限り改変は行いません。</p><p id="7d3e1e14-3563-41e8-b6ef-722987b48ea6" class="">
+</p><ul id="d84c8fc1-8ce8-4ed9-befb-e074b09d86e2" class="bulleted-list"><li style="list-style-type:disc">絵文字名</li></ul><p id="d947c6a3-2abe-4c70-98f2-d3428ed23b9c" class="">ローマ字、英語表記で１5文字以内でお願いします。尚文字の区切りには”_”をご使用ください。</p><p id="2a64f51e-2494-4d16-a8f4-ed04483e187c" class="">記載例</p><p id="f3658a7b-9a36-4572-b2ff-6ee9534fccd3" class="">:yudetamago: :yaki_shouronpou:</p><ul id="5ca8ae94-2c86-4bf0-aee7-0f7daf7d533a" class="bulleted-list"><li style="list-style-type:disc">ライセンス</li></ul><p id="aaf01d86-cb5d-4bf1-ab9e-96f910238241" class="">クリエイティブコモンズに記載されている記法、あるいは詳細な利用条件をご提示いただけると幸いです。</p><ul id="6dd14a4a-30cb-41dc-a86e-54ccb8c68b5b" class="bulleted-list"><li style="list-style-type:disc">著作者へのリンクページ、著作者名</li></ul><p id="9b2dd4d5-6959-466f-aa71-8deec23e0e79" class="">リンクページは公式サイトなどが無い場合はSNSのアカウントでも構いません。</p><p id="0b035873-de88-4d71-80ae-736cfe264073" class="">著作者を特定できるサービスのリンクをご提示いただけると幸いです。</p><p id="b2882b21-2826-49fe-ae05-8aba2c98318b" class="">
+</p><p id="eef8eb3d-74fc-44b1-9b72-13cc899bf5e0" class="">
+</p><figure id="c1f1db16-43f1-495d-9d88-2a85670da838" class="image"><a href="%E7%B5%B5%E6%96%87%E5%AD%97%E3%80%81%E6%8E%B2%E8%BC%89%E8%A8%B1%E8%AB%BE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E8%91%97%E4%BD%9C%E6%A8%A9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E9%81%A9%E7%94%A8%2085357b90798c4448aec1acdcb97e1ec0/OTNPMST(2).png"><img style="width:375px" src="%E7%B5%B5%E6%96%87%E5%AD%97%E3%80%81%E6%8E%B2%E8%BC%89%E8%A8%B1%E8%AB%BE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E8%91%97%E4%BD%9C%E6%A8%A9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E9%81%A9%E7%94%A8%2085357b90798c4448aec1acdcb97e1ec0/OTNPMST(2).png"/></a></figure><p id="6581b395-5125-41a8-a2d4-db144744a21a" class="">
+</p><h2 id="5ce6e169-0b1e-4996-8fb0-f42c27ed49bb" class="">ライセンスの更新について</h2><p id="30e80b40-65a1-4af3-9128-6c7adf8876d6" class="">
+</p><p id="48db1c88-0b49-4504-8fc0-08edad3d36ff" class="">コンテンツ公開後にライセンスにつき更新がある場合には</p><p id="51ad86e0-0d5f-4d9c-8a4c-fa3c5d651832" class="">①絵文字名</p><p id="30689628-d4fb-4e4e-8013-97b9ad74fcb7" class="">②更新内容の詳細　</p><p id="67515bac-d11f-4051-a474-017b15a14966" class="">について記載してください。</p><p id="5a64dc7f-1a39-429d-9698-eff5adecd063" class="">
+</p><h3 id="8efeb0ed-ea47-466e-9ee1-8e5d7f82020f" class="">その他特約および免責</h3><p id="39a39384-ed01-41cc-83cd-944f99592b85" class="">
+</p><p id="f72e7682-0618-42b6-9097-9a30cc96f820" class="">サマリーの著作権管理につきましては、日本国法を適用します。日本国法に準用する形でクリエイティブコモンズなどのライセンスを扱う点にご注意ください。</p><p id="2d96dfa9-c15f-4f29-bfdb-e420f13724c7" class="">資料の中でパブリック・ドメインに属している部分に関して、あるいはサマリーの利用が著作権法上の権利制限規定にもとづく場合には、当該権利制限規定が優先されます。</p><p id="bedc99e6-50a1-45ec-9d19-89d83f211a50" class="">
+</p><p id="247cdd5b-26cb-464f-9a0f-0cebef6b78c2" class="">パブリシティ権、肖像権、人格権 などの他の諸権利がサマリーにどのように資料を利用するかを制限することがあります。この場合はこれらの権利が優先されるものとします。</p><p id="f65e91f6-43db-4ef2-ad0c-5f8d46948e4a" class="">
+</p><p id="ba557b05-5408-4c78-b1e3-940333d45a17" class="">Misskeyシステム上不可抗力により著作権侵害が発生する場合には、サマリーは一切の責任を負いません。尚、これらの不可抗力は故意、あるいは悪意重過失でない侵害に関しては総じて推定させていただくものとします。</p><p id="31a28d75-6c7a-4c37-9fc2-471452bfb557" class="">
+</p><p id="a5e9e5e5-9587-455a-af3d-125035e9817e" class="">絵文字は原則として採用させて頂いておりますが、</p><ul id="dec5544f-d0a9-4a3d-904e-6615e5780138" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red">絵文字ではなく単純な文字である</mark>（OTNPSTみたいなものは例外です。）</li></ul><ul id="c139412c-9dd5-4d4e-bf9b-2b3e9de8188e" class="bulleted-list"><li style="list-style-type:disc">公序良俗に反する内容</li></ul><ul id="1bcccaf3-4db8-40b5-872e-ece0b7f80378" class="bulleted-list"><li style="list-style-type:disc">他の著作権者の権利を侵害する恐れがある内容</li></ul><ul id="a58d371c-005b-46eb-abd0-6165663083a3" class="bulleted-list"><li style="list-style-type:disc">その他サマリーで扱うのは厳しいと判断した内容</li></ul><p id="ef59c3f5-6985-4449-8e41-5befa70466f3" class="">に関しては採用をお断りさせて頂く場合がございます。あしからずご了承ください。</p><p id="fb7af372-7141-4d4c-8140-77e0cc81edfd" class="">尚、採否に関する内容は適宜連絡させて頂きます。</p><h1 id="b492f114-aa9e-4626-9524-e7c92a830567" class="">サマリーに提供いただいた、もしくは許諾を得て提供している絵文字一覧</h1><p id="10d62816-a1a0-448e-be9a-4c0b1c0bd336" class="">
+</p><p id="3aab2174-9011-4918-afd0-08105fce6222" class="">
+</p><p id="06ca3e38-e1ae-4a36-b916-2b1fa9c79eb9" class="">正規表現を行う為敬称省略させて頂きます。</p><p id="ada74d70-fc55-466a-ae40-023c224c0661" class="">
+</p><table id="305535f7-88e9-4a94-a25e-ac1b50ffe6eb" class="simple-table"><tbody><tr id="8babef35-615c-461e-b442-5e8c2ba5a297"><td id="cLx[" class="">著作者</td><td id="UASV" class="" style="width:484px">ホームページ等</td></tr><tr id="487c6db2-9f44-4142-ada5-a8b6d5e2aa37"><td id="cLx[" class="">駒草</td><td id="UASV" class="" style="width:484px"><a href="https://misskey.backspace.fm/@07770_">https://misskey.backspace.fm/@07770_</a></td></tr><tr id="b4fedbe4-020a-4511-a5b2-462f5354fe7e"><td id="cLx[" class="">しかまつ</td><td id="UASV" class="" style="width:484px"><a href="https://note.com/shikamatsu">https://note.com/shikamatsu</a></td></tr><tr id="c904c214-67cb-412d-8e13-4c8db3e211d3"><td id="cLx[" class="">Jonathan Kupferman</td><td id="UASV" class="" style="width:484px"><a href="https://www.jkupferman.com/">https://www.jkupferman.com/</a></td></tr></tbody></table><p id="008aff6d-0405-4b12-a3b7-f6f47da6a931" class="">
+</p><p id="29672efd-6169-4147-96c4-68f43d6a6fc7" class="">
+</p><p id="528b0519-8fac-4495-a04d-85b64acc2541" class="">ページ作成日　2023/08/06</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,701 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>個人設定</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="04510278-4851-4daf-9c5f-c9552c51d003" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A%200451027848514daf9c5fc9552c51d003/%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%25AB%25E3%2581%25AA%25E3%2581%25979.png"/></div><h1 class="page-title">個人設定</h1><p class="page-description"></p></header><div class="page-body"><p id="d677b244-5161-4c01-a6b7-ca56e0b2b5e8" class="">
+</p><p id="c768ff2c-023f-42f4-b9b3-e26ba34a91ab" class="">SNSでアカウントを登録した後にまず初めにやることは</p><p id="5cc8b5e0-870d-47a3-87d5-d67113579f14" class="">
+</p><h1 id="d6e3eac9-2600-4e17-a7b0-2025c1cb73d5" class="">初ｶｷｺ…ども…</h1><p id="31f6fb56-ddd9-435b-ae00-8b06c3f1e784" class="">
+</p><h2 id="d2b7f045-c670-41a9-aa1b-629e25242f85" class=""><mark class="highlight-red">とか絶対やったらだめですよ！</mark>皆してるけど…</h2><p id="7244d118-23f1-4ef9-88dd-e3f3d4fbca39" class="">
+</p><p id="04864da7-38e3-4241-8ad6-da77f46d3197" class="">まず初めにやることは、あいさつではなく<strong>個人設定</strong>です。</p><p id="f7b1d173-39d4-4173-a324-d00b4c337852" class="">未知のSNS、どんな設定がデフォルトになっているか分かりません。</p><p id="fcc9ae99-9e7d-4000-a9f1-6e1df15c2c69" class="">
+</p><p id="e6ab8b6e-47e3-475f-a3d3-b496e928cb60" class="">まずは設定画面に飛んで、身の安全を確保しましょう。</p><p id="b2fea62c-f5a0-476a-bd60-cc5f7530740b" class="">
+</p><p id="4e75ab97-9450-46c4-8e0e-d4caa8cd96b3" class="">チュートリアルを終えたらこんな感じの画面が出ると思います。</p><p id="ca5cab35-ff4f-4f59-8000-b98b969d22d8" class="">左のコントロールパネルっぽい部分を観たら歯車がありますね。</p><p id="d05af391-0b1c-4d57-a875-c527509f394f" class="">大体歯車は設定です。とりあえず触ろうぜ。</p><p id="a3e25329-7e5b-4810-aebe-06ea498406c7" class="">
+</p><p id="687d595d-793e-44a4-8872-955c0c431964" class="">
+</p><figure id="807bf0ff-47fc-40b6-97fe-416558d7bbd4" class="image"><a href="%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A%200451027848514daf9c5fc9552c51d003/%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%25AB%25E3%2581%25AA%25E3%2581%25973.png"><img style="width:1918px" src="%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A%200451027848514daf9c5fc9552c51d003/%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%25AB%25E3%2581%25AA%25E3%2581%25973.png"/></a></figure><p id="e8d1f96c-683b-458e-99dd-7ad3cfad7696" class="">
+</p><p id="88f9b120-a61f-483e-af13-3ca16a2278da" class="">触れ！</p><p id="c94c29a1-1146-4bc5-8cbe-737f1160a762" class="">
+</p><figure id="4625b026-e7e5-4416-9e69-48bfb225d4e9" class="image"><a href="%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A%200451027848514daf9c5fc9552c51d003/%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%25AB%25E3%2581%25AA%25E3%2581%259710.png"><img style="width:1001px" src="%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A%200451027848514daf9c5fc9552c51d003/%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%25AB%25E3%2581%25AA%25E3%2581%259710.png"/></a></figure><p id="c64444fb-e355-4294-a741-5084f4cb2110" class="">
+</p><p id="58bfabe4-795d-4ad4-adaf-7e24c422dd99" class="">触った！</p><p id="c34f41ff-028c-4b3d-9272-3b0e3558a3cb" class="">何か出た！</p><p id="01823ab8-63fa-48c6-a2b4-603206f68fb8" class="">
+</p><p id="d249f2e8-067c-4d3f-81df-03ddd0e2a3b3" class="">サマリー並びにMisskeyでは主にここで設定を弄ります。</p><p id="27c789fd-648f-495e-af79-d525631f9d12" class="">まずは、左の設定一覧から　クライアント→全般　と移動してください。</p><p id="489b2022-b60e-4bb4-843f-d1291bc20afb" class="">
+</p><p id="9e3df239-554f-4932-8da7-04b42c0eb197" class="">これが設定画面です。</p><p id="e9ffbbce-3018-4cc0-8220-08043065fd8f" class="">とりあえず一番最初にする設定はプライバシーの設定です。</p><figure id="c4a6bf2f-ed71-4ada-89b7-94580da8d959" class="image"><a href="%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A%200451027848514daf9c5fc9552c51d003/%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%25AB%25E3%2581%25AA%25E3%2581%259711.png"><img style="width:757px" src="%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A%200451027848514daf9c5fc9552c51d003/%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%25AB%25E3%2581%25AA%25E3%2581%259711.png"/></a></figure><p id="f942dcd9-ffc4-4fc0-a7e7-dfc7372ecdd7" class="">
+</p><p id="ac185b48-2b5a-4f00-876b-96620f8558ec" class="">基本的には説明に書いてある通りなんですが、聞き覚えの無さそうな2つの項目だけ紹介します。</p><p id="20a19edb-d1d4-40a8-a4f3-e234f779e4d2" class="">
+</p><ul id="c509d194-7b83-4670-ba74-ea34cd878572" class="bulleted-list"><li style="list-style-type:disc">クローラーによるインデックスを拒否</li></ul><p id="b7d43df9-d153-41fd-9d22-773ca1a752e9" class="">
+</p><p id="453631f5-d081-4075-9d36-84fbb175a838" class="">皆さんが使っている検索エンジン、グーグルやヤフーといったものは、どうやって各サイトを登録しているかというと、ロボットに一生懸命探すように命令しているんです。このロボットがクローラー。社畜です。</p><p id="63d047bf-f08b-4db9-90c9-a1e7683ecf03" class="">クローラーは世界中のウェブサイトを駆け回って探し当てたサイトをデータベース（貯蔵庫）に蓄積します。これをインデックスという。</p><p id="5dd694fa-8507-4087-bfd7-c790958368ab" class="">
+</p><p id="137caf96-0272-4385-9ab3-d51e622b162b" class="">要するにこの設定は</p><p id="13d3ba1b-6f79-4d6b-ad8a-4d449a722390" class="">1.ロボットがあなたのアカウントを巡回する</p><p id="a723e461-279f-46d3-8357-057bb07f9277" class="">2.あなたが発言した内容を見つける</p><p id="1f723e21-0364-4809-bc8b-412ffd7afb14" class="">3.その情報を検索エンジンのデータベースに載せる</p><p id="d99054f3-05bf-484b-af2c-02d047c18c82" class="">といったものを<strong>拒否</strong>します。</p><p id="46946e2c-6d39-4cca-b7fe-0c4806ff3642" class="">これによって検索エンジンにあなたのアカウントが掲載される可能性を減らすことが出来ます。</p><p id="69d9a242-0a4b-4e29-a5b3-e338b8ed22de" class="">忍者必見だね🌟</p><p id="6c1672bd-4ddd-46c5-a188-c2624574d30d" class="">
+</p><p id="02a17d54-8fcc-427b-810e-80d1b7c3e274" class="">
+</p><ul id="ae90f58e-4f7f-4fdc-a427-fa79feeb3e1e" class="bulleted-list"><li style="list-style-type:disc">AIによる学習の拒否</li></ul><p id="be33a49f-4776-4cc7-92c3-11230f6e4d02" class="">
+</p><p id="ca09b99d-a677-4e92-b40c-3f1f26abc44a" class="">最近話題のAIイラストですが、学習元は何かというと、今日までにウェブサイトにアップロードされたり、データベースに保存された既存のイラストや絵画、写真といったものです。</p><p id="a2b31ac7-869e-481d-a728-4b669b31312f" class="">要するに誰かが書いた絵をAIが学習して、絵の出し方を覚えてるわけですね。</p><p id="9435bc5a-a05b-4d5b-b6ea-a50424331536" class="">AIに自分が描いた絵を吸い出されるのやだー！っていう人はオンにしておくと幸せになれます。</p><p id="ac2760bd-0149-49d8-a38d-88a03b28ee90" class="">（この設定はデフォルトでオンなので特段弄る必要はありません）</p><p id="ff9ab681-1763-4be6-9a71-9f82b1094f8e" class="">
+</p><p id="715a6b7f-a558-4364-ac97-3bd324138a9b" class="">あとの設定は、何か触ってみて変化を楽しんでみてください。</p><p id="63a4c34e-c811-42e8-8ed2-d79d29337be6" class="">（ただし、アカウント消去の項目は触ってはならぬぞ…救えない命になる）</p><p id="926201b6-0f35-4d77-949c-8a241a1d51c0" class="">
+</p><p id="40a11113-f40b-46b6-9e08-d55065a61ceb" class="">
+</p><p id="2202a49a-a415-44e4-b654-b2d3c300093f" class="">
+</p><p id="976d86d5-25cb-4ba6-a432-a05ee6b08a52" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
